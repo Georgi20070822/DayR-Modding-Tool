@@ -1,8 +1,6 @@
 # English:
 # DayR Modding Tool v0.0.1
 
-**Graphical modding tool Day R Survival (version 1.694)**
-
 ---
 
 ## 🚀 What's new in this version
@@ -71,8 +69,6 @@ MIT License
 # Ru:
 
 # DayR Modding Tool v0.0.1
-
-**Графический инструмент для моддинга Day R Survival (версия 1.694)**
 
 ---
 
