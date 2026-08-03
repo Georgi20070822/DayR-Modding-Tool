@@ -1,136 +1,101 @@
-# English:
-# DayR Modding Tool v0.0.1
 
 ---
 
-## 🚀 What's new in this version
+## Английская версия
 
-- The first public release
-- Unpacking and packing resource.car
-- Decompilation .lu → .lua and compilation .lua → .lu (separately)
-- File manager with SHA-1 hash search and calculation
-- Font settings (classic, RO.ttf, freemono.ttf, russo_one.ttf)
-- Bilingual interface (Russian/English)
-- Saving logs and cleaning up the project
-- The sound of pressing buttons
+```markdown
+# DayR Modding Tool
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**DayR Modding Tool** is a graphical tool for modding the game **Day R Survival** (version 1.694 and below). It automates all key modding steps: unpacking the `resource.car` archive, decompiling scripts, compiling modified files, and packing the modded archive.
 
 ---
 
-## ⚙️ System requirements
+## 📥 Download the Ready-to-Use Program
 
-- Windows 7/8/10/11 (32 or 64 bit)
-- ~100 MB of free space for the program + ~2 GB for the game files (when unpacking)
-- Write permissions in the project folder
-
----
-
-## , Installation
-
-The program **does not require installation**. Just download the EXE file and run it.
-
-At the first launch, the antivirus may warn you about an unknown file. Add it to the exceptions. The program is safe.
+**The latest stable version can be downloaded from the [Releases](https://github.com/Georgi20070822/DayR-Modding-Tool/releases) section.**  
+Previous versions are also available there.
 
 ---
 
-## 📖 Short instructions
+## 🆕 What's New in Version 0.0.2
 
-1. Select the project folder.
-2. Select resource.car (or copy it to the resources/ folder).
-3. Click "Unpack resource.car".
-4. Click "Decompile all .lu → .lua".
-5. Edit .lua files in the mod_scripts folder (or via the file manager).
-6. Compile the modified files through the file manager (the "Assemble" button).
-7. Pack the mod with the "Pack resource.car (mod)" button.
-8. Copy the received resource.car to the game folder (after saving the original).
+- ✅ **Project profile management** – create, select, export/import profiles (`.dayr`).
+- ✅ **Built-in Lua editor** with syntax highlighting (if `pygments` is installed).
+- ✅ **Lua console** for running arbitrary code.
+- ✅ **Hash button** in the file manager (SHA-1).
+- ✅ **Profiles button** on the top panel.
+- ✅ Administrator rights check on startup.
+- ✅ Various bug fixes (including the `write() argument must be str, not None` issue).
 
-> **Important:** Never use the "Compile All" button.lua → .lu" – it can break the game!
-
----
-
-## 🛠️ Supported versions of the game
-
-The program has been tested on versions 1.683 and 1.694. For newer versions, the file structure may vary – use it at your own risk.
+For a full list of changes, see the [Changelog](#-changelog-history) section.
 
 ---
 
-## 📞 Contacts and support
+## ⚙️ System Requirements
 
-- Telegram: @Georgy2007
-- Discord: georgy2007
-
-If you find a mistake or have any suggestions, write to us.
-
----
-
-## 📄 License
-
-MIT License
-
-# Ru:
-
-# DayR Modding Tool v0.0.1
+- **OS**: Windows 7/8/10/11 (32 or 64 bit)
+- **RAM**: 512 MB or more
+- **Free disk space**: ~100 MB for the tool + ~2 GB for game files (during unpacking)
+- **Write permissions** in the working folder
 
 ---
 
-## 🚀 Что нового в этой версии
+## 🛠️ Building from Source
 
-- Первый публичный релиз
-- Распаковка и упаковка resource.car
-- Декомпиляция .lu → .lua и компиляция .lua → .lu (по отдельности)
-- Менеджер файлов с поиском и вычислением SHA-1 хеша
-- Настройка шрифтов (классический, RO.ttf, freemono.ttf, russo_one.ttf)
-- Двуязычный интерфейс (русский/английский)
-- Сохранение логов и очистка проекта
-- Звук нажатия на кнопки
+If you want to build the program yourself from the source code (for development or custom modifications):
+
+1. Make sure you have **Python 3.8+** and **pip** installed.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/Georgi20070822/DayR-Modding-Tool.git
+   cd DayR-Modding-Tool
+
+# DayR Modding Tool
+
+[![Лицензия MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**DayR Modding Tool** — графическая программа для моддинга игры **Day R Survival** (версия 1.694 и ниже). Она автоматизирует все основные этапы создания модов: распаковку игрового архива `resource.car`, декомпиляцию скриптов, компиляцию изменённых файлов и сборку модифицированного архива.
+
+---
+
+## 📥 Скачать готовую программу
+
+**Последнюю стабильную версию можно скачать в разделе [Releases](https://github.com/Georgi20070822/DayR-Modding-Tool/releases).**  
+Там же доступны все предыдущие версии.
+
+---
+
+## 🆕 Что нового в версии 0.0.2
+
+- ✅ **Управление профилями проектов** — создание, выбор, экспорт/импорт профилей (`.dayr`).
+- ✅ **Встроенный редактор Lua** с подсветкой синтаксиса (если установлен `pygments`).
+- ✅ **Lua-консоль** для выполнения произвольного кода.
+- ✅ **Кнопка «Хеш»** в менеджере файлов (SHA-1).
+- ✅ **Кнопка «Профили»** на верхней панели.
+- ✅ Проверка прав администратора при запуске.
+- ✅ Исправлены ошибки (в том числе проблема с `write() argument must be str`).
+
+Полный список изменений см. в разделе [История изменений](#-история-изменений-changelog).
 
 ---
 
 ## ⚙️ Системные требования
 
-- Windows 7/8/10/11 (32 или 64 бит)
-- ~100 МБ свободного места для программы + ~2 ГБ для файлов игры (при распаковке)
-- Права на запись в папке проекта
+- **ОС**: Windows 7/8/10/11 (32 или 64 бит)
+- **ОЗУ**: от 512 МБ
+- **Свободное место**: ~100 МБ для программы + ~2 ГБ для файлов игры (при распаковке)
+- **Права на запись** в рабочей папке
 
 ---
 
-## 📥 Установка
+## 🛠️ Сборка из исходников
 
-Программа **не требует установки**. Просто скачайте EXE-файл и запустите.
+Если вы хотите собрать программу самостоятельно из исходного кода (для разработки или внесения изменений):
 
-При первом запуске антивирус может предупредить о неизвестном файле – добавьте его в исключения. Программа безопасна.
-
----
-
-## 📖 Краткая инструкция
-
-1. Выберите папку проекта.
-2. Выберите resource.car (или скопируйте его в папку resources/).
-3. Нажмите "Распаковать resource.car".
-4. Нажмите "Декомпилировать все .lu → .lua".
-5. Редактируйте .lua файлы в папке mod_scripts (или через менеджер файлов).
-6. Скомпилируйте изменённые файлы через менеджер файлов (кнопка "Собрать").
-7. Упакуйте мод кнопкой "Упаковать resource.car (мод)".
-8. Скопируйте полученный resource.car в папку с игрой (предварительно сохранив оригинал).
-
-> **Важно:** Никогда не используйте кнопку "Скомпилировать все .lua → .lu" – это может сломать игру!
-
----
-
-## 🛠️ Поддерживаемые версии игры
-
-Программа протестирована на версии 1.683 и 1.694. Для более новых версий структура файлов может отличаться – используйте на свой риск.
-
----
-
-## 📞 Контакты и поддержка
-
-- Telegram: @Georgy2007
-- Discord: georgy2007
-
-Если вы нашли ошибку или у вас есть предложения – пишите.
-
----
-
-## 📄 Лицензия
-
-MIT License
+1. Убедитесь, что у вас установлен **Python 3.8+** и **pip**.
+2. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/Georgi20070822/DayR-Modding-Tool.git
+   cd DayR-Modding-Tool
