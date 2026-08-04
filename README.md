@@ -1,57 +1,8 @@
-
 # DayR Modding Tool
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**DayR Modding Tool** is a graphical tool for modding the game **Day R Survival** (version 1.694 and below). It automates all key modding steps: unpacking the `resource.car` archive, decompiling scripts, compiling modified files, and packing the modded archive.
-
----
-
-## 📥 Download the Ready-to-Use Program
-
-**The latest stable version can be downloaded from the [Releases](https://github.com/Georgi20070822/DayR-Modding-Tool/releases) section.**  
-Previous versions are also available there.
-
----
-
-## 🆕 What's New in Version 0.0.2
-
-- ✅ **Project profile management** – create, select, export/import profiles (`.dayr`).
-- ✅ **Built-in Lua editor** with syntax highlighting (if `pygments` is installed).
-- ✅ **Lua console** for running arbitrary code.
-- ✅ **Hash button** in the file manager (SHA-1).
-- ✅ **Profiles button** on the top panel.
-- ✅ Administrator rights check on startup.
-- ✅ Various bug fixes (including the `write() argument must be str, not None` issue).
-
-For a full list of changes, see the [Changelog](#-changelog-history) section.
-
----
-
-## ⚙️ System Requirements
-
-- **OS**: Windows 7/8/10/11 (32 or 64 bit)
-- **RAM**: 512 MB or more
-- **Free disk space**: ~100 MB for the tool + ~2 GB for game files (during unpacking)
-- **Write permissions** in the working folder
-
----
-
-## 🛠️ Building from Source
-
-If you want to build the program yourself from the source code (for development or custom modifications):
-
-1. Make sure you have **Python 3.8+** and **pip** installed.
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/Georgi20070822/DayR-Modding-Tool.git
-   cd DayR-Modding-Tool
-
-# DayR Modding Tool
-
-[![Лицензия MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-**DayR Modding Tool** — графическая программа для моддинга игры **Day R Survival** (версия 1.694 и ниже). Она автоматизирует все основные этапы создания модов: распаковку игрового архива `resource.car`, декомпиляцию скриптов, компиляцию изменённых файлов и сборку модифицированного архива.
+**DayR Modding Tool** — графическая программа для моддинга игры **Day R Survival** (версия 1.694 и ниже). Она автоматизирует все основные этапы создания модов: распаковку игрового архива `resource.car`, декомпиляцию скриптов, компиляцию изменённых файлов, сборку модифицированного архива и **проверку кода на ошибки** с помощью встроенного статического анализатора Luacheck.
 
 ---
 
@@ -62,15 +13,26 @@ If you want to build the program yourself from the source code (for development 
 
 ---
 
-## 🆕 Что нового в версии 0.0.2
+## 🆕 Что нового в версии 0.0.3
 
-- ✅ **Управление профилями проектов** — создание, выбор, экспорт/импорт профилей (`.dayr`).
-- ✅ **Встроенный редактор Lua** с подсветкой синтаксиса (если установлен `pygments`).
-- ✅ **Lua-консоль** для выполнения произвольного кода.
-- ✅ **Кнопка «Хеш»** в менеджере файлов (SHA-1).
-- ✅ **Кнопка «Профили»** на верхней панели.
-- ✅ Проверка прав администратора при запуске.
-- ✅ Исправлены ошибки (в том числе проблема с `write() argument must be str`).
+- ✅ **Интеграция Luacheck** — статический анализ кода на Lua.
+- ✅ **Новые кнопки**: «Проверить один .lua» (ряд 3) и «Проверить все .lua» (ряд 4).
+- ✅ В менеджере файлов добавлена кнопка **«Проверить»** для каждого файла.
+- ✅ Luacheck находит неиспользуемые переменные, необъявленные глобалы, недостижимый код и другие ошибки.
+- ✅ Улучшена документация и инструкции.
+
+### Предыдущие версии
+
+**Версия 0.0.2:**
+- Управление профилями проектов (создание, выбор, экспорт/импорт).
+- Встроенный редактор Lua с подсветкой синтаксиса.
+- Lua-консоль для выполнения кода.
+- Кнопка «Хеш» в менеджере файлов.
+- Проверка прав администратора при запуске.
+
+**Версия 0.0.1 (первый релиз):**
+- Базовая функциональность: распаковка/упаковка resource.car, декомпиляция/компиляция, менеджер файлов, настройки шрифтов.
+- Поддержка русского и английского языков.
 
 Полный список изменений см. в разделе [История изменений](#-история-изменений-changelog).
 
@@ -85,11 +47,28 @@ If you want to build the program yourself from the source code (for development 
 
 ---
 
+## 🚀 Быстрый старт
+
+1. Скачайте `DayR_Modding_Tool.exe` из раздела [Releases](https://github.com/Georgi20070822/DayR-Modding-Tool/releases).
+2. Запустите программу.
+3. Выберите папку проекта.
+4. Укажите путь к `resource.car` из игры.
+5. Нажмите «Распаковать resource.car» → «Декомпилировать все .lu → .lua».
+6. Отредактируйте нужные `.lua` файлы в папке `mod_scripts`.
+7. **Проверьте код** через Luacheck (кнопка «Проверить один .lua» или «Проверить все .lua»).
+8. Скомпилируйте изменённые файлы через менеджер файлов (кнопка «Собрать»).
+9. Нажмите «Упаковать resource.car (мод)» и сохраните новый архив.
+10. Скопируйте полученный `resource.car` в папку с игрой.
+
+Подробная инструкция — в разделе [Помощь](#-помощь) внутри программы (кнопка «?»).
+
+---
+
 ## 🛠️ Сборка из исходников
 
 Если вы хотите собрать программу самостоятельно из исходного кода (для разработки или внесения изменений):
 
-1. Убедитесь, что у вас установлен **Python 3.8+** и **pip**.
+1. Убедитесь, что у вас установлен **Python 3.10+** и **pip**.
 2. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/Georgi20070822/DayR-Modding-Tool.git
