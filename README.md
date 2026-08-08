@@ -92,6 +92,8 @@ If you want to build the program yourself from the source code (for development 
    cd DayR-Modding-Tool
 
    # DayR Modding Tool
+   
+# DayR Modding Tool
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
